@@ -1,0 +1,4 @@
+node_modules/
+.env
+Chatbot/Server/node_modules/
+Chatbot/Server/.env
