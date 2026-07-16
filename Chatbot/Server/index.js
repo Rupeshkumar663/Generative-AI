@@ -9,10 +9,10 @@ const PORT=process.env.PORT
 app.use(cors());
 app.use(express.json());
 app.post('/chat',async(req,res)=>{
-        const {message}=req.body;
-        console.log('Message',message);
-           const result=await generate(message)
-        res.json({message:result})
+        const {message,threadId}=req.body;
+        
+        const result=await generate(message,threadId)
+        
 })
 app.listen(PORT,()=>{
     console.log(`server is running on port: ${PORT}`);
